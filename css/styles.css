@@ -24,6 +24,7 @@ button {
 }
 img {
     display: block;
+    max-width: 100%;
 }
 .contacts-nav {
     font-style: normal
@@ -72,13 +73,13 @@ body {
 }
 .page-logo {
     font-family: "Raleway", sans-serif;
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 1.17;
-        color: #4d5ae5;
-        letter-spacing: 0.03em;
-        text-transform: uppercase;
-        margin-right: 76px;
+    font-size: 18px;
+    line-height: 1.17;
+    color: #4d5ae5;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-right: 76px;
+    font-weight: 700;
 }
 .gray-logo {
     color: #2e2f42;
@@ -96,12 +97,28 @@ body {
         color: #2e2f42;
         padding: 24px 0;
         display: block;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-link:hover,
 .menu-link:focus, 
 .contacts-link:hover,
 .contacts-link:focus {
     color: #404bbf;
+}
+
+.current {
+    position: relative;
+    color: #404bbf;
+}
+.current::after {
+    content: "";
+    position: absolute;
+    background: #404bbf;
+    border-radius: 2px;
+    height: 4px;
+    width: 100%;
+    left: 0;
+    bottom: -1px;
 }
 .contacts {
     display: flex;
@@ -113,10 +130,14 @@ body {
 .contacts-link {
     line-height: 1.5;
     letter-spacing: 0.02em;
-}
-.contacts-item {
     color: #434455;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 }
+.contacts-link:hover,
+.contacts-link:focus {
+    color: #404bbf;
+}
+
 
 /* ============ HERO STYLES ============ */
 .hero {
@@ -125,6 +146,8 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 188px 0;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office\ 1.jpg);
+    background-size: cover;
 }
 
 .main-title {
@@ -176,6 +199,20 @@ body {
 .benefits-item {
     width: calc((100% - 72px) / 4);
 }
+.benefits-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f4fd;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    min-width: 264px;
+    height: 112px;
+    margin-bottom: 8px;
+}
+.benefits-svg-icons {
+    
+}
 .benefits-list-title {
         font-weight: 500;
         font-size: 20px;
@@ -193,6 +230,26 @@ body {
         line-height: 1.5;
         letter-spacing: 0.02em;
         color: #434455;
+}
+
+.social-link-list {
+    display: flex;
+    gap: 24px;
+    margin-right: 16px;
+    margin-left: 16px;
+}
+.soc-links-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #4d5ae5;
+    width: 40px;
+    height: 40px;
+    margin-top: 8px;
+}
+.social-list {
+    stroke: #f4f4fd;
 }
 
 /* ============ TEAM STYLES ============ */
@@ -272,6 +329,30 @@ body {
     margin-bottom: 48px;
     width: calc((100% - 48px) / 3)
 }
+.overlay-box {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+.overlay-content {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    left: 0;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
+    font-size: 16px;
+    padding: 40px 32px;
+    background-color: #4D5AE5;
+    overflow: auto;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);;
+}
+.portfolio-list-item:hover .overlay-content {
+    transform: translateY(0%);
+}
 .portfolio-text {
     font-family: "Roboto", sans-serif;
         font-weight: 400;
@@ -288,12 +369,23 @@ body {
     padding-top: 100px;
     padding-bottom: 100px;
 }
+.footer-column {
+    display: flex;
+    align-items: center;
+    padding-right: 692px;
+
+}
+    
+.bottom-container {
+    margin-right: 120px; 
+}
+
 .white-logo {
     color: #f4f4fd;
 }
 .logo-bottom {
     display: inline-block;
-    margin-bottom: 16px
+    margin-bottom: 16px;
 }
 .bottom-text {
         font-size: 16px;
@@ -302,4 +394,16 @@ body {
         color: #f4f4fd;
         max-width: 264px;
         margin-top: 16px;
+}
+.socials-header {
+    color: #ffffff;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    font-size: 16px;
+}
+.footer-social-link-list {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
 }
