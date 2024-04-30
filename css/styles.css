@@ -414,7 +414,6 @@ body {
     display: flex;
     padding-right: 692px;
     align-items: baseline;
-    margin-right: 120px;
 }
 
 .white-logo {
@@ -444,9 +443,6 @@ body {
     display: flex;
     gap: 16px;
 }
-.soc-links-item {
-    gap: 16px;
-}
 .soc-link-footer {
     display: flex;
     height: 100%;
@@ -454,7 +450,7 @@ body {
     border-radius: 50%;
     align-items: center;
     justify-content: center;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     width: 100%;
 }
 .soc-link-footer:hover,
