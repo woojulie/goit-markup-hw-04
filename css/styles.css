@@ -268,7 +268,7 @@ body {
 .team-item {
     border-radius: 0px 0px 4px 4px;
     justify-content: center;
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 .team-info {
@@ -360,7 +360,7 @@ body {
 }
 .portfolio-list-item {
     margin-bottom: 48px;
-    width: calc((100% - 48px) / 3)
+    width: calc((100% - 48px) / 3);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-list-item:hover,
@@ -433,6 +433,7 @@ body {
         color: #f4f4fd;
         max-width: 264px;
         margin-top: 16px;
+        width: 264px;
 }
 .socials-header {
     color: #ffffff;
